@@ -1,0 +1,334 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #cce4ff; 
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+header {
+    background-color: #003366; 
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+nav .logo {
+    font-size: 20px; 
+    font-weight: 600;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+nav ul li {
+    margin-left: 10px 0;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+nav ul li a:hover {
+    color: #80d0ff;
+    text-decoration: underline;
+}
+.layout {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    gap: 30px;
+}
+.menu {
+    width: 20%;
+    background-color: #80bfff; 
+    padding: 20px;
+    text-align: center;
+}
+.menu a {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #66a3ff; 
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.menu a:hover {
+    background-color: #003366; 
+    color: white;
+}
+.main {
+    width: 60%;
+    padding: 0 20px;
+}
+.right {
+    width: 20%;
+    background-color: #80bfff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+.section {
+    padding: 50px 20px;
+    background-color: #fff;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.section:hover {
+    transform: translateY(-10px);
+    background-color: #e6f2ff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.section .content {
+    text-align: center;
+}
+h1, h2, h3 {
+    color: #003366; 
+}
+p {
+    font-size: 18px;
+    color: black;
+    text-align: justify;
+    margin: 20px 0;
+}
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.gallery img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.gallery img:hover {
+    transform: scale(1.1);
+}
+footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0; 
+    margin-top: 40px;
+    width: 100%;
+    box-sizing: border-box; 
+}
+@media (max-width: 1024px) {
+    .layout {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .menu, .main, .right {
+        width: 100%;
+        flex: 1 1 100%;
+    }
+    .gallery img {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav .logo {
+        margin-bottom: 10px;
+    }
+    .layout {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .gallery img {
+        width: 90%; 
+        max-width: 500px; 
+        margin-bottom: 15px; 
+    }
+    .section {
+        padding: 10px;
+    }
+    .menu, .main, .right {
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    header, footer {
+        padding: 10px 0; 
+    }
+    nav .logo {
+        font-size: 18px; 
+    }
+    nav ul li a {
+        font-size: 14px; 
+    }
+    .layout {
+        flex-direction: column;
+        padding: 5px;
+    }
+    .section {
+        padding: 8px;
+    }
+    .menu, .main, .right {
+        width: 100%;
+        padding: 5px; 
+    }
+    .gallery img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+.dark-theme {
+    background-color: #1c1c1c; 
+    color: #f1f1f1; 
+}
+.dark-theme header {
+    background-color: #2d2d2d;
+    color: #f1f1f1;
+}
+.dark-theme nav {
+    background-color: #2d2d2d;
+}
+
+.dark-theme nav ul li a {
+    color: #80bfff;
+}
+
+.dark-theme nav ul li a:hover {
+    color: #80bfff;
+}
+.dark-theme .menu {
+    background-color: #2d2d2d;
+    color: #f1f1f1;
+}
+
+.dark-theme .menu a {
+    background-color: #444;
+    color: #f1f1f1;
+}
+.dark-theme .menu a:hover {
+    background-color: #80bfff;
+    color: #000;
+}
+.dark-theme .main {
+    background-color: #1c1c1c;
+    color: #f1f1f1;
+}
+.dark-theme .section {
+    background-color: #2d2d2d;
+    color: #f1f1f1;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); 
+}
+.dark-theme .section:hover {
+    background-color: #333;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+.dark-theme .right {
+    background-color: #2d2d2d;
+    color: #f1f1f1;
+}
+.dark-theme .gallery img {
+    border: 2px solid #80bfff;
+}
+.dark-theme footer {
+    background-color: #2d2d2d;
+    color: #f1f1f1;
+}
+.dark-theme h1 {
+    color: #80bfff;
+}
+.dark-theme h2 {
+    color:#80bfff;
+}
+.dark-theme h3 {
+    color:#80bfff;
+}
+.dark-theme p {
+    color: #f1f1f1;
+}
+.dark-theme nav .logo {
+    color: #f1f1f1; 
+}
+.dark-theme p a {
+    color: #80bfff;
+}
+@media (max-width: 768px) {
+    .dark-theme .layout {
+        flex-direction: column;
+    }
+    .dark-theme .gallery img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+#theme-toggle {
+    margin-top: 20px; 
+    padding: 10px 20px;
+    background-color: white;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+#theme-toggle:hover {
+    background-color: #80bfff;
+    transform: translateY(-2px);
+}
+.navigate {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+.navigate-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #004d9a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.navigate-button:hover {
+    background-color: #80bfff;
+    transform: translateY(-2px);
+}
+video {
+    width: 100%;
+    height: auto; 
+    max-width: 500px; 
+    border-radius: 10px;
+    display: block;
+    margin: 20px auto;
+}
